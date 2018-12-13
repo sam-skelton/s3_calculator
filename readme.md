@@ -13,5 +13,6 @@ result:
 
 to do:  
 * add rounding
-* add size options
+* add size options (mb, gb, tb)
 * add flag to simply calculate for all buckets
+* add optional custom cost flag
