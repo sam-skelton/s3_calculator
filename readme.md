@@ -10,3 +10,8 @@ result:
 ```
 [{"name":"bucket_1","size_in_mb":256717858.7,"cost": 5264.72},{"name":"bucket_2","size_in_mb": 38433997.77,"cost": 788.2}]
 ```
+
+to do:  
+* add rounding
+* add size options
+* add flag to simply calculate for all buckets
