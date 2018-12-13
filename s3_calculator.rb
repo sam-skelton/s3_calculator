@@ -8,15 +8,15 @@ def fetch_results
     limit = ARGV[0].to_i
   end
   region = ENV[ 'AWS_REGION' ]
-  if ENV[ 'AWS_REGION' ] == 'us-east-1'
-    location_constraint = ""
+  if ENV[ 'AWS_REGION' ] == 'us-east-1' 
+    location_constraint = "" #us-east-1 is an empty string in the ruby aws-sdk
   else
     location_constraint = ENV[ 'AWS_REGION' ]
   end
   s3 = Aws::S3::Resource.new( region: region )
   s3_results = []
   s3.buckets.limit(limit).each do |bucket|
-    if s3.client.get_bucket_location( bucket: bucket.name ).location_constraint == location_constraint #us-east-1 is an empty string in the ruby aws-sdk
+    if s3.client.get_bucket_location( bucket: bucket.name ).location_constraint == location_constraint
       size = 0
       objects = bucket.objects
       obj_counter = 1
