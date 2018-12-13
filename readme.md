@@ -13,5 +13,4 @@ result:
 
 to do:  
 * add size options (mb, gb, tb)
-* add flag to simply calculate for all buckets
-* add optional custom cost flag
+* add optional custom cost arg
