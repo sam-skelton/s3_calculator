@@ -1,6 +1,6 @@
 # S3 Cost Calculator  
 
-A simple ruby script to calculate s3 bucket costs. It uses your local aws env vars and takes an argument for how many buckets to calculate. Outputs a JSON object.
+A simple ruby script to calculate s3 bucket cost for a given region using your local aws region env var. Can pass an optional argument to set how many buckets to iterate over. Outputs a JSON object.
 
 example:  
 ```

@@ -2,7 +2,11 @@ require 'aws-sdk-s3'
 require 'json'
 
 def fetch_results
-  limit = ARGV[ 0 ].to_i
+  if ARGV[0].nil?
+    limit = 9999999999999999
+  else
+    limit = ARGV[0].to_i
+  end
   region = ENV[ 'AWS_REGION' ]
   if ENV[ 'AWS_REGION' ] == 'us-east-1'
     location_constraint = ""
